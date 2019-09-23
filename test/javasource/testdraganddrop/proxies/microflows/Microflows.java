@@ -10,24 +10,10 @@ import com.mendix.core.Core;
 import com.mendix.core.CoreException;
 import com.mendix.systemwideinterfaces.MendixRuntimeException;
 import com.mendix.systemwideinterfaces.core.IContext;
-import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public class Microflows
 {
 	// These are the microflows for the TestDragAndDrop module
-	public static testdraganddrop.proxies.Item dSS_GetEmptyContext(IContext context)
-	{
-		try
-		{
-			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			IMendixObject result = (IMendixObject)Core.execute(context, "TestDragAndDrop.DSS_GetEmptyContext", params);
-			return result == null ? null : testdraganddrop.proxies.Item.initialize(context, result);
-		}
-		catch (CoreException e)
-		{
-			throw new MendixRuntimeException(e);
-		}
-	}
 	public static void iVK_Detail_Reordered(IContext context, testdraganddrop.proxies.DetailDnD _detailDnD)
 	{
 		try

@@ -26,6 +26,17 @@
             <category>Drop</category>
             <description>Optional, a selector indicating which draggable elements are accepted. Leave empty to accept any draggable. This is a CSS selector, not a class.</description>
         </property>
+        <property key="dropTolerance" type="enumeration" required="true" defaultValue="intersect">
+            <caption>Drop tolerance</caption>
+            <category>Drop</category>
+            <description>Specifies when a draggable element is accepted. See https://api.jqueryui.com/droppable/#option-tolerance for an explanation.</description>
+            <enumerationValues>
+                <enumerationValue key="intersect">Intersect</enumerationValue>
+                <enumerationValue key="pointer">Pointer</enumerationValue>
+                <enumerationValue key="fit">Fit</enumerationValue>
+                <enumerationValue key="touch">Touch</enumerationValue>
+            </enumerationValues>
+        </property>
         <property key="dropEntityList" type="object" isList="true" required="true">
             <caption>Droppable entities</caption>
             <category>Drop</category>
