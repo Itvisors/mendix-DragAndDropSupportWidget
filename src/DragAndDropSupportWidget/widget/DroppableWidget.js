@@ -51,7 +51,7 @@ require( [
             }
             var node;
             if (this.dropTargetSelector) {
-                node = $(this.dropTargetSelector);
+                node = $(this.domNode).closest(this.dropTargetSelector);
             } else {
                 node = $(this.domNode.parentElement);
             }
