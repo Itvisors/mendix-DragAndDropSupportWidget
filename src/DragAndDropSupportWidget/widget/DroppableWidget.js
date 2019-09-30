@@ -17,6 +17,7 @@ require( [
         dropTargetHoverClass: "",
         dropTargetSelector: "",
         acceptSelector: "",
+        dropTolerance: "",
         dropEntityList: [],// [ draggedEntity, onDropEntity, draggedReference, dropTargetReference, onDropMicroflow ]
 
         // Internal variables
@@ -43,6 +44,7 @@ require( [
                 accept: this.acceptSelector || "*",
                 greedy: true,
                 hoverClass: this.dropTargetHoverClass,
+                tolerance: this.dropTolerance,
                 drop: function (event, ui) {
                     self._drop(event, ui);
                 }
